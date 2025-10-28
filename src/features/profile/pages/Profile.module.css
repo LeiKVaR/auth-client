@@ -1,0 +1,264 @@
+/* Profile.module.css */
+.container {
+    min-height: 100vh;
+    background: #f8fafc;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    padding: 40px 20px;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Tarjeta principal del perfil */
+.profileCard {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.02);
+    border: 1px solid #f1f5f9;
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 32px 40px;
+    color: white;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+}
+
+.logoutButton {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.logoutButton:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.content {
+    padding: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.field {
+    margin-bottom: 24px;
+}
+
+.label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.value {
+    font-size: 16px;
+    color: #1e293b;
+    font-weight: 500;
+    margin: 0;
+    padding: 12px 16px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Información de sesión */
+.sessionInfo {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.02);
+    border: 1px solid #f1f5f9;
+    padding: 32px 40px;
+}
+
+.sessionTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 24px 0;
+}
+
+.sessionGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.status {
+    font-size: 14px;
+    font-weight: 600;
+    color: #059669;
+    background: #d1fae5;
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0;
+}
+
+/* Estados de carga y error */
+.loadingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    margin: 40px;
+}
+
+.errorContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    margin: 40px;
+}
+
+.loadingText {
+    font-size: 18px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.errorText {
+    font-size: 16px;
+    color: #dc2626;
+    font-weight: 500;
+}
+
+.noProfile {
+    text-align: center;
+    padding: 60px 40px;
+}
+
+.noProfileText {
+    font-size: 16px;
+    color: #64748b;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .container {
+        padding: 20px 16px;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .sessionGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .headerContent {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .logoutButton {
+        align-self: stretch;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 24px;
+    }
+    
+    .sessionInfo {
+        padding: 24px;
+    }
+    
+    .header {
+        padding: 24px;
+    }
+    
+    .title {
+        font-size: 24px;
+    }
+    
+    .sessionTitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 16px 12px;
+    }
+    
+    .content {
+        padding: 20px 16px;
+    }
+    
+    .sessionInfo {
+        padding: 20px 16px;
+    }
+    
+    .header {
+        padding: 20px 16px;
+    }
+    
+    .title {
+        font-size: 22px;
+    }
+    
+    .value {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+    
+    .logoutButton {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    
+    .loadingContainer, .errorContainer {
+        margin: 20px;
+        min-height: 300px;
+    }
+}
